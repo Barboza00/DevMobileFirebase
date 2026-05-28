@@ -5,14 +5,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAXyokZbQSBe3XynoLOMP9vMrjjP95BEKI",
-  authDomain: "aulaquartadevmobile.firebaseapp.com",
-  databaseURL: "https://aulaquartadevmobile.firebaseapp.com",//endereço do banco
-  projectId: "aulaquartadevmobile",
-  storageBucket: "aulaquartadevmobile.firebasestorage.app",
-  messagingSenderId: "820898447281",
-  appId: "1:820898447281:web:4a0ed66ee1816152868790",
-  measurementId: "G-H75KJ43VCX"
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.EXPO_PUBLIC_FIREBASE_DATABASE_URL,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
